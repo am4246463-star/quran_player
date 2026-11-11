@@ -1,0 +1,36 @@
+
+lib/
+├── main.dart                        ← نقطة الدخول + MaterialApp + RTL
+│
+├── models/
+│   └── surah.dart                   ← فئة Surah + getter مسار الملف
+│
+├── data/
+│   └── surah_data.dart              ← قائمة ثابتة بـ 114 سورة
+│
+├── services/
+│   ├── audio_player_service.dart    ← محرك الصوت (ChangeNotifier)
+│   └── storage_service.dart         ← التخزين المحلي (ChangeNotifier)
+│
+├── screens/
+│   ├── home_screen.dart             ← القائمة الرئيسية + البحث
+│   ├── player_screen.dart           ← شاشة المشغّل الكاملة
+│   ├── favorites_screen.dart        ← السور المفضلة
+│   └── settings_screen.dart         ← الوضع الليلي + المتابعة
+│
+├── widgets/
+│   ├── surah_list_item.dart         ← عنصر السورة في القائمة
+│   ├── mini_player.dart             ← شريط صغير دائم أسفل الشاشة
+│   └── audio_progress_bar.dart      ← شريط التقدّم (Slider + الأوقات)
+│
+└── theme/
+    ├── app_colors.dart              ← الألوان (أخضر زمردي، ذهبي...)
+    └── app_theme.dart               ← ThemeData للوضعين
+
+assets/
+├── audio/
+│   ├── 001.mp3
+│   ├── 002.mp3
+│   └── ... (حتى 114.mp3)
+└── fonts/
+    └── (خط عربي مثل Amiri أو Noto Naskh Arabic — يُضاف في الخطوة 8)
